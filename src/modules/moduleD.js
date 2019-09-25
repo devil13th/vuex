@@ -1,10 +1,10 @@
 export default {
   state: {
-      text: 'moduleD'
+    text: 'moduleD'
   },
   getters: {},
   mutations: {
-    setText(state) {
+    setText (state) {
       state.text = 'A'
     }
   },

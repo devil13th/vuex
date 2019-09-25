@@ -36,7 +36,7 @@ export default{
       //调用store的mutations中的growUp方法
       this.$store.commit('growUp');
     },
-    decrease(){
+    decrease(){ 
       //调用store的actions中的unGrowUp方法
       this.$store.dispatch("unGrowUp");
     },

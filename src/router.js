@@ -11,7 +11,7 @@ import ComponentF from './components/vuextest/componentF/ComponentF'
 Vue.use(Router)
 
 export default new Router({
-  mode: 'history',//history
+  mode: 'history', // history
   base: process.env.BASE_URL,
   routes: [
     {
@@ -56,6 +56,6 @@ export default new Router({
       path: '/vuextest/componentF/ComponentF',
       name: 'ComponentF',
       component: ComponentF
-    },
+    }
   ]
 })
