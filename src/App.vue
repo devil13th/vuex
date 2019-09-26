@@ -10,11 +10,23 @@
       <router-link to="/vuextest/componentE/ComponentE">ComponentE</router-link> |
       <router-link to="/vuextest/componentF/ComponentF">ComponentF</router-link> |
 
+      <span @click="jumpTo">JS跳转</span>
       
     </div>
     <router-view/>
   </div>
 </template>
+
+<script>
+export default{
+  methods:{
+    jumpTo(){
+      this.$router.push({name: 'ComponentD'});
+    }
+  }
+}
+
+</script>
 
 <style>
 #app {
