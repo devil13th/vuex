@@ -10,35 +10,34 @@
 </template>
 
 <script>
-import {mapState, mapActions,mapMutations,mapGetters } from 'vuex';
+import { mapState, mapActions, mapMutations, mapGetters } from 'vuex'
 
 export default {
-    computed: {
-        ...mapGetters({
-            //将name映射为store中的getters的detail
-            name: 'moduleF/detail',
-            name2 : 'detail'
-        }),
+  computed: {
+    ...mapGetters({
+      // 将name映射为store中的getters的detail
+      name: 'moduleF/detail',
+      name2: 'detail'
+    }),
 
-        ...mapState({
-            //name: state => state.moduleC.text
-            name3: state => (state.moduleC.text + '和' + state.moduleD.text)
-        })
+    ...mapState({
+      // name: state => state.moduleC.text
+      name3: state => (state.moduleC.text + '和' + state.moduleD.text)
+    })
 
-        
-    },
+  },
 
-    methods: {
-        ...mapMutations({
-            m1:'moduleF/setText'
-        }),
-        ...mapActions({
-            m2:'moduleF/callAction'
-        }),
-        modifyNameAction() {
-            this.m1();
-            this.m2();
-        }
-    },
+  methods: {
+    ...mapMutations({
+      m1: 'moduleF/setText'
+    }),
+    ...mapActions({
+      m2: 'moduleF/callAction'
+    }),
+    modifyNameAction () {
+      this.m1()
+      this.m2()
+    }
+  }
 }
 </script>
