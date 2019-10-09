@@ -7,7 +7,7 @@
 
 <script>
 import {mapState, mapActions, mapMutations} from 'vuex'
-
+console.log(mapState, mapActions, mapMutations)
 export default {
   computed: {
     ...mapState(['name'])

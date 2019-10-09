@@ -31,7 +31,6 @@
           <button @click="callOtherModuleActionsOrMutations2">在methods中直接调用其他模块的Actions或mutations的方法</button>
         </a-spin>
 
-        </a-spin>
 <a-divider/>
 <div style="text-align:left;padding:32px;">
 总结：<br/>
