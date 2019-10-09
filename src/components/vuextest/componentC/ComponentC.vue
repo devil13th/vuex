@@ -6,20 +6,20 @@
 </template>
 
 <script>
-import {mapState, mapActions,mapMutations} from 'vuex';
+import {mapState, mapActions, mapMutations} from 'vuex'
 
 export default {
-    computed: {
-        ...mapState(['name'])
-    },
+  computed: {
+    ...mapState(['name'])
+  },
 
-    methods: {
-        ...mapActions(['modifyName']),
+  methods: {
+    ...mapActions(['modifyName']),
 
-        modifyNameAction() {
-            //this.modifyName 是通过...mapActions(['modifyName'])映射进来的
-            this.modifyName('devil13th.');
-        }
-    },
+    modifyNameAction () {
+      // this.modifyName 是通过...mapActions(['modifyName'])映射进来的
+      this.modifyName('devil13th.')
+    }
+  }
 }
 </script>
