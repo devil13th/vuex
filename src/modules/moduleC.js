@@ -1,5 +1,5 @@
 export default {
-
+  namespaced: true,
   state: {
     text: 'moduleC'
   },
@@ -12,11 +12,19 @@ export default {
   actions: {
     callAction ({state, rootState}) {
       alert(state.text + '-' + rootState.name)
+    },
+    setTextSync ({commit, state, rootState}, parameter) {
+      setTimeout(function () {
+        commit('setText2', parameter)
+      }, 1000)
     }
   },
   mutations: {
     setText (state) {
       state.text = 'A'
+    },
+    setText2 (state, v) {
+      state.text = v
     }
   }
 }
